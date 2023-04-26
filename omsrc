@@ -1,0 +1,49 @@
+###########################################################
+#
+# System wide config file for AdvanceMail/Remote
+#
+# (c) 1995 Open Mind Solutions (cc)
+#
+###########################################################
+
+# When AdvanceMail/Remote starts, it will look for the "omsrc"
+# file in /etc, /usr/lib, and /usr/local/lib (in that order).
+# It will then read the .omsrc file in the user's home directory.
+#
+# Upon exit ALL settings are written to the .omsrc file, so 
+# this system-wide file is just for first-time initialisation
+# of new users.
+#
+# The variables that can be contained in the startup files are:
+#
+# server - the mail server host
+# user   - the user name
+# password - the user's password (for auto-logon; this is a security risk!)
+# print  - the local print command; use ! as a file name placeholder
+# poll   - the poll interval in seconds between checks for new mail
+# filetypes - the location of the OpenMail filetypes file. If not present,
+#	         then the filetypes file is retrieved from the server when
+#		 the user logs in. This variable can be used to force a
+#		 local file to be accessed and thus reduce network use.
+# links  - the location of the application links file. This file can contain
+#		lines consisting of (file type number, command) pairs. When
+#		composing/editing a file of that type, the corresponding
+#		command will be executed. For example, the links file entry
+#		"1167 vi" will result in vi being used to edit text files.
+# helpfile - the location of the hypertext help text file (with the .txt
+#		extension). The help index file (extension .idx) must be
+#		in the same directory.
+# maxaddresses - the maximum number of matching addresses to return from
+#		directory searches. If an address pattern or partial
+#		address matches more than this number of alternates,
+#		an invalid address will be reported. Setting this to a
+#		small number can reduce network traffic. The default is 64.
+#
+
+poll       	60
+filetypes  	/usr/local/lib/filetypes
+helpfile   	/usr/local/lib/advmail.txt
+print	   	lp -c !
+maxaddresses	64
+
+

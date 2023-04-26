@@ -1,0 +1,12 @@
+When tracking a message, there are some shortfalls:
+
+* if there are more than msglines of info returned
+* if there are more than msglines of actual meaningful info returned
+* if the message has more than one distribution list
+
+Get file types in Other class from filetype list
+
+Fix mail sent message.
+
+Look into directory searches with many matches.
+

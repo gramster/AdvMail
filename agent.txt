@@ -1,0 +1,4 @@
+@entry{NOHELP,Out of luck!}
+
+Sorry, there is no help for this screen yet.
+

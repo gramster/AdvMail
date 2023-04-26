@@ -1,0 +1,1042 @@
+@entry{START,Getting Started}
+
+AdvanceMail/Remote is a Unix-based full screen mail application that allows
+an OpenMail user to manage their mail. It operates in client-server mode, i.e. 
+it may run on a different machine to the OpenMail server. In order to use 
+AdvanceMail/Remote, you need to be defined as a user on the OpenMail server. 
+Please check with your administrator before trying to run AdvanceMail/Remote.
+
+AdvanceMail/Remote allows access to the full range of OpenMail functionality, 
+with a hypertext online help system. AdvanceMail/Remote supports reading, 
+sending, and filing of mail messages.  
+ 
+@entry{RUNNING,  Running AdvanceMail/Remote}
+
+To run AdvanceMail/Remote, simply type `advremote <Enter>' at the prompt. 
+AdvanceMail/Remote will present you with the @ref{LOGINSCREEN,login screen}, where you will be 
+required to enter your user details. These details include:
+
+
+        The OpenMail Server Name
+        Your User Name
+        Your Password
+
+
+Make sure that you know these details before you run AdvanceMail/Remote for
+the first time.
+
+@entry{NAVIGATING,  Navigating AdvanceMail/Remote}
+
+Navigating AdvanceMail/Remote is done by a combination of the arrow keys,
+the enter key, the function keys, and the page-up and page down keys. The
+arrow keys move the cursor highlight bar up and down, the Enter key takes
+action, usually opening a container item unless entering text at a prompt,
+or entering an address line, in which case the Enter key terminates input. 
+The function keys all take some type of action, which is clearly indicated
+on the function key label at the bottom of the screen. The @ref{LOGINSCREEN,Login Screen}
+function key labels show what keystroke corresponds to the function key in
+each of the positions 1 - 8.
+
+The pageup key displays the previous page of data, while the pagedown key
+displays the next page of data. On some terminals, the pageup and pagedown
+keys do not work, so AdvanceMail/Remote provides an alternate keystroke 
+sequence for pageup and pagedown that always works, irrespective of the 
+terminal type you are using. The keystroke for pageup is <CTRL-U> and for 
+pagedown <CTRL-D>.
+.np
+To move between data entry fields, use the up and down cursor keys and
+the tab key. When the cursor is positioned on a data field you can move
+within the field with the left and right arrow keys. Use backspace and
+delete to delete characters within a data field. Typing a character will
+cause the character to be inserted in the field.
+
+Some fields are `toggle' fields; that is, they have a limited set of
+values which can be changed by pressing the space bar. The most common
+examples are fields which can be set to `YES' or `NO'.
+
+Most data fields perform some form of data validation before you can
+leave the field. The type of validation depends on whether the field
+holds a date, a time, an address, or a number.
+
+@entry{LOGINSCREEN,  The Login Screen}
+
+The first screen you see when you run AdvanceMail/Remote is the Login Screen.
+Here, you will be prompted for
+
+        Server:         The name (or address) of the OpenMail server. 
+                        Your administrator will have this information.
+                        Enter the OpenMail Server Name and press <Enter>.
+
+        User Name:      Your user name. This is in the form `FirstName 
+                        Surname'. Enter your user name and press <Enter>.
+
+        Password:       Your assigned password. The password will not, for 
+                        security reasons, be echoed on the screen. If you 
+                        forget your password, please contact the OpenMail 
+                        Administrator, who will be able to reset it. 
+                        Enter your password and press <Enter>.
+.np
+For your convenience, AdvanceMail/Remote can partially automate the login 
+process by saving your user name and the OpenMail server name to its @ref{CONFIGURING,config} 
+file. 
+
+@entry{MAINSCREEN,  The Main Screen}
+
+After successfully completing the @ref{LOGINSCREEN,Login Screen}, you will see the Main Screen. 
+This screen shows the areas that constitute your mailstore. The areas and 
+their functions are:
+
+
+                                Main OpenMail Areas
+
+
+
+                @ref{INTRAY,In Tray}            A holding area for messages sent 
+                                        to you.
+
+                @ref{OUTTRAY,Out Tray}           A holding area for outgoing messages.
+ 
+                @ref{FILECABINET,Filing Cabinet}     The area that contains folders where 
+                                   you can file your mail messages.
+ 
+                @ref{DISTLISTS,List Area}          Contains your private distribution 
+                                   lists.
+
+                @ref{PENDINGTRAY,Pending Tray}       Area where you may view the 
+                                   acknowledgement status of messages 
+                                   you have sent.
+
+		@ref{BBAREA,Bulletin Boards}	Area for common messages
+
+You  may enter any of these areas by moving the cursor bar to the desired 
+entry and pressing <Enter> or <F1>. AdvanceMail/Remote will open this area 
+and display its contents.
+
+@entry{GETTINGHELP,  Getting Help}
+
+AdvanceMail/Remote has full context sensitive help. Pressing the help key will 
+give help for the area of AdvanceMail/Remote you are in at present. Each help 
+screen has hypertext links to other related areas. These links may be accessed
+by moving the highlighted cursor bar with the arrow keys to the desired 
+reference, and pressing <Enter>. Alternatively, you may select the <Index> key
+to see a list of all possible help topics.
+  
+@entry{OUTTRAY,The Out Tray}
+
+The Out Tray is essentially a holding area for messages that you wish to send.
+Conceptually, you @ref{EDITING,compose} a message and put it in your out tray. The system
+then picks up the message from the out tray, and mails it to the users
+selected in the message's @ref{DISTLISTS,distribution list}.  
+
+You may @ref{READING,read}, @ref{PRINTING,print}, @ref{DELETING,delete}, @ref{CREATING,create} and @ref{MAILING,mail} a message from the out tray
+screen. Using the <Other keys> option, you may also @ref{OPENING,open} a multipart message, 
+and @ref{FILING,file} a message.
+
+@entry{CREATING,  Creating a Message}
+
+In order to create a message, press the function key <Create>. You will be 
+presented with a screen to fill in the subject and @ref{ADDRESSING,addressees} of the message.
+
+@entry{ADDRESSING,  Addressing a Message}
+
+There are three steps to @ref{CREATING,creating} a basic message. The first of these is to
+enter a subject for the message. This is done in the `subject' field at
+the top of the message. Once you have entered the subject, you need to key in
+the addresses of the users. There are two ways of doing this:
+
+ 
+        You know the address    Key in the address in OpenMail @ref{POSITIONALFORMAT,positional} 
+                                format.
+
+        You are unsure of the    
+        address and need to 
+        query the directory     Search the directory
+
+Let's say that you wish to send a message to Ian Cooper, but are unsure of the
+full @ref{OPENMAILADDRESSES,OpenMail address} for Ian Cooper. In the TO field, key in Coo* and press
+Enter. All OpenMail address listed in the directory that start with a surname
+of `Coo' will be displayed in a popup window at the top left of the screen.
+Using the arrow keys, move down the list until you have highlighted the
+address that corresponds to the person you wish to mail, and press Enter.
+AdvanceMail/Remote will insert the address in the TO field your cursor was in 
+prior to invoking the @ref{DIRSEARCH2,search} facility. 
+
+Continue filling in the @ref{ADDRESSING,distribution list} in this fashion until you have
+specified all the people to receive your address. If you wish to copy or
+blind copy (a blind copied person will not show up in the distribution list  
+as a recipient of the message) a person, press the <TO/CC/BCC/FROM> to 
+toggle the type of the address. 
+
+If you wish to send to a user who is on an external mail system, such as the
+worldwide @ref{X400,X.400} or @ref{FOREIGNADDRESS,Internet} networks, you will need to fill in an extended
+address form.
+   
+@entry{EDITING,  Editing a Message}
+
+AdvanceMail/Remote has a simple inbuilt text editor to allow you to compose 
+and edit a message. To enter the text of your message, select the <Compose> 
+key. From here, you may enter the text of the message. The editing keys are: 
+
+                        Message Editing Keys
+
+                Function                        Keystroke 
+                _______________________________________________
+
+                Start Of Line                   Home or Ctrl-A
+                End Of Line                     End or Ctrl-X
+                Delete Line                     Ctrl-Y
+                Previous Word                   Ctrl-P
+                Next Word                       Ctrl-N
+                Page Up                         PgUp or Ctrl-U
+                Page Down                       PgDn or Ctrl-D
+.np
+                Left Character                  Left Arrow
+                Right Character                 Right Arrow
+                Down Line                       Down Arrow
+                Up Line                         Up Arrow
+                Split Line                      Enter
+                Join Line                       Delete (at EOL)
+
+By default, the editor performs automatic word wrapping. You may turn this
+option off if you wish. If lines are longer than 80 columns, and you turn on
+word wrapping, AdvanceMail/Remote will reformat the input text, wrapping lines
+as necessary as soon as you press a key within that line.
+
+The top status line of the display shows your current line and column number,
+as well as the current size of your message. Once you have finished entering 
+the text of your message, press the <Save Text> key. 
+
+@entry{FILEATTACH,  Attaching a File}
+
+If you wish to attach a file to the message, press the <Include File/Doc>
+key. You will be prompted at the top of the screen for:
+
+        The File Type   Use the space bar to toggle the file type until 
+                        the desired type appears.
+
+        The File Name   Enter the file name you wish to send.
+
+
+Please be wary of attaching large files to messages unless absolutely 
+necessary, as it can have a noticeable impact on the network throughput.
+
+Once you have entered these two bits of information, press the 
+<Perform Include> key, and the file will be attached to your message.
+.np
+If you wish to see what body parts your message contains, press the 
+<Open Message> key. Your message will be @ref{OPENING,opened}, and the various
+body parts, along with their type, will be displayed. You may then read, 
+print, or delete any of these body parts at your discretion. Be aware that 
+you will not be able to delete the primary distribution list, as this is what 
+tells OpenMail where to send the message. 
+
+@entry{CHANGESUBJECT,  Changing the Message Subject}
+
+When you are viewing an open message in the Out Tray or in the Folder area,
+you can change the message subject by pressing the `Change Subject' key. A
+prompt will appear at the top of the screen. Enter the new subject and press
+ENTER or the `Perform Change' key.
+
+@entry{MAILING,  Mailing Your Message}
+
+Once you have completed composing and attaching files to your message, you
+may mail it by pressing the <Mail Message> key. 
+
+@entry{INTRAY,The In Tray}
+
+The In Tray is the area where you receive messages sent and copied to you.
+When entering the in tray area, the messages you have received and kept
+in your in tray are listed, with the oldest message at the top of the list,
+and the newest at the bottom of the list. 
+
+On the top left, a status line tells you how many messages you have in your in
+tray. 
+
+For each message, the subject, sender, date received, and flags are listed. 
+The @ref{MESSAGESETTINGS,message flags} tell you several things about a message you have received. 
+The flags appear on the right hand side of the in tray screen. An asterisk 
+under a flag heading means that the message beside which the asterisk appears 
+has this particular flag set for the message. The possible flags are itemized 
+below:
+.np
+        TO      The message was addressed directly to you, rather than being 
+                addressed to someone else and copied to you.
+
+        NEW     The message is new (i.e.\ unread).
+
+        ACK     An acknowledgment receipt was requested by the sender.
+
+        PRI     The message is private.
+
+        URG     The message is urgent.
+
+@entry{READING,  Reading a Message}
+
+In order to read a message, move the cursor highlight bar onto the desired
+message and press <Enter> or <Read>. AdvanceMail/Remote will open and 
+display the message. From here, you may @ref{PRINTING,print}, @ref{DELETING,delete}, @ref{REPLYING,reply} or @ref{FORWARDING,forward}
+the message to another user. Selecting <Other Keys> will display
+a new set of function key labels that will allow you to @ref{FILING,file} the message
+away or @ref{OPENING,open} the message to view what types of body parts are contained
+in the message. 
+
+Any binary message parts will not be displayed. For such body parts, you will
+see a message indicating that the body part is not of text type and cannot
+be displayed on the terminal.
+ 
+@entry{PRINTING,  Printing a Message}
+
+You may print a message either from the main in tray screen, or while @ref{READING,reading}
+the message. To print, press the <Print> key. Your message will be printed 
+using the Unix lp command. This print command by be @ref{PRINTSETUP,overridden} by adjusting 
+the @ref{CONFIGURING,setup} options. 
+
+@entry{DELETING,  Deleting a Message}
+
+You may delete a message either from the main in tray screen, or while
+reading the message. To delete, press the <Delete> key. If in the main
+@ref{INTRAY,in tray} screen, the message list and count will automatically be updated.
+If @ref{READING,reading} the message, you will be returned to the main in tray screen,
+and the message list and count will be updated. All deleted messages are
+moved to the wastebasket @ref{FILECABINET,folder}, where they remain for a period of time 
+before they are discarded. 
+
+@entry{FORWARDING,  Forwarding a Message}
+
+Forwarding a message is much like @ref{CREATING,sending} a message. As with @ref{PRINTING,print} and @ref{DELETING,delete},
+you may forward a message both from the main @ref{INTRAY,in tray} screen and while @ref{READING,reading}
+the message. To forward a message, press the <Forward> key. From here on,
+the procedure is almost identical to sending a message. You fill in the 
+distribution list with the @ref{DIRSEARCH2,desired addressees}, and mail the message.
+
+@entry{REPLYING,  Replying to a Message}
+
+As with @ref{FORWARDING,forwarding}, replying to a message is much like sending a message. In
+order to reply to a message, you press the <Reply> key. You have an
+additional two things that are important here: the `Reply To' field, and 
+the text of the reply.
+
+The `Reply To' field at the top of the screen is changed by putting the
+cursor in this field and repeatedly pressing <Spacebar> to toggle the 
+value. You may reply to the sender of the message, or you may reply to all 
+addressees listed on the message. This will include those who were copied 
+in the original message.
+
+The second thing you need to do when replying to a message is to @ref{EDITING,compose} the
+text of your reply. This is done by pressing the <Compose>  key. Composing
+your reply is identical in every respect to the procedure you follow when 
+@ref{CREATING,creating} a new message. When you have finished composing your reply, press 
+<Save Reply> to save your reply, then <Mail Reply> to @ref{MAILING,mail} the reply
+to the selected addressees.
+
+@entry{OPENING,  Opening a Message}
+
+OpenMail messages consist of multiple body parts. You may think of these as 
+separate files, if it makes it easier to conceptualize. A mail message 
+generally has two body parts:
+
+        A @ref{DISTLIST,Distribution List} that contains the @ref{OPENMAILADDRESSES,addressees}
+
+        A textual body part that contains the message
+
+Often, a message will contain additional bodyparts. If, for example, you
+@ref{REPLYING,reply} to a message, an extra body part gets added - the text of your reply.
+@ref{OPENING,Opening} a message allows you to view the various body parts that constitute
+the message. Once open, you may @ref{EDITING,edit}/@ref{DELETING,delete}/@ref{PRINTING,print} any of the body parts that
+comprise the message (with the exception described above).
+
+@entry{SAVINGITEM,  Saving a Message Item}
+
+You may also save a body part to a file. There are two ways you may save a
+body part:
+
+        1. As text
+
+        2. In its original format
+
+
+If you wish to save an item as text, select the <Save Item as Text> key.
+AdvanceMail/Remote will prompt you for the name of the file to which you wish 
+to write the body part.
+
+If the body part is a textual body part, it will be saved as is. If, however,
+the body part is non-text, OpenMail will try to convert it to text before
+saving it. OpenMail has several predefined conversions available, and may be
+configured to support new file types.
+
+If you request to save an item as text and OpenMail cannot perform the 
+conversion, an error will be returned to AdvanceMail/Remote. 
+
+If you wish to save an item in its native format, simply select <Save Item>
+and enter the name of the file to save to when prompted.
+
+@entry{FILING,  Filing a Message}
+
+When you wish to keep a message, but don't want it to clutter up your in tray,
+you use the <filing mechanism> to save the message away to a folder. 
+If you have a message in your in tray that you wish to file, select <File>
+and a popup listbox with the available @ref{FILECABINET,folders} will be displayed in the top 
+right corner of your screen. Using the arrow keys, select the desired folder
+and press <Move to Folder> or <Copy to Folder> depending on whether you wish 
+to move  or copy the item to the folder. Since OpenMail permits nested 
+folders, you may need to press <Enter> on a folder name in the popup box to 
+see the nested folders that it contains.  
+
+You may, if you wish, create a new folder at this point by pressing 
+<Create Folder>. You will be prompted for the name of the new folder, upon 
+which the folder will be created. Move or copy the message to the new folder.
+
+@entry{FILECABINET,The Filing Cabinet}
+
+The Filing Cabinet is an area, much like your in tray, that contains all the 
+defined folders. You may press <Enter> on any of the folders in the file 
+cabinet, and it will be opened, displaying its contents in the same fashion 
+as the in tray. At this point, you may proceed  to process the items in this 
+folder in exactly the same fashion as items in your @ref{INTRAY,in tray}. A point to note 
+here is that folders may be nested within folders. Clicking on a nested folder
+will open this folder to display the contents.
+
+The Waste Basket folder deserves special mention. All deleted messages are
+in fact moved to this folder. After a predefined length of time, the waste
+basket is emptied. If you choose to log copies of your outgoing messages,
+they are copied to the waste basket when you send them. 
+.np
+Use the filing cabinet to logically organize your mail you wish to keep. The
+hierarchical nature of OpenMail folders allow a strict organization of your
+mail into functionally related areas. You may create folders using the 
+@ref{CREATEFOLDER,<Create Folder>} key, delete folders using the <Delete Folder> key, reorganize 
+the order of the folders using the <Re-order> key, and open folders by 
+pressing <Enter> on the desired folder. 
+
+@entry{CREATEFOLDER,  Creating a Folder or Area}
+
+When creating a new folder, you will be prompted to enter a name. Type the
+name and press ENTER or the `Perform Create' key.
+
+You can also create a new folder when @ref{FILING,filing} a message.
+
+@entry{RENAMEFOLDER,  Renaming a Folder}
+
+When you open a folder to see the messages it contains, you can rename the
+folder by pressing the `Rename Folder' key. A prompt will appear at the top
+of the screen. Enter the new folder name and press ENTER or `Perform Rename'.
+
+@entry{PENDINGTRAY,Pending Tray}
+
+When you request an @ref{ACKNOWLEDGEMENTS,acknowledgement} on a message, you need to be able to view 
+the @ref{TRACKING,tracking} status of these messages. The Pending Tray provides this 
+functionality. In the pending tray will be a list of all messages (their 
+subject and date sent) on which you have requested an acknowledgement. 
+
+To view the message, highlight it with the cursor bar, and press <Enter>.
+The message will be displayed in the same manner as messages in your in tray.
+
+@entry{TRACKING,Tracking A Message}
+
+If you wish to view the acknowledgement status for a message, press the
+<Track Message> key. You will be presented with a screen that shows
+each recipient of the message on the left, and the acknowledgement status
+on the right. You will see whether the message has been delivered, read,
+replied to, or deleted. Exit this screen by pressing <Done>.
+
+Please remember to delete the item in the Pending Tray when you have finished
+tracking the message.
+
+@entry{BBAREA,The Bulletin Board Area}
+
+The Bulletin Board Area is a common posting area for messages. It contains
+bulletin boards (created by the mail adminstrator), which in turn may
+contain other bulletin boards and messages. You can move through the 
+top-level list of boards with the cursor keys, and enter a particular 
+board area by pressing ENTER. In fact, using the Bulletin Board Area is
+much like using the @ref{FILECABINET,Filing Cabinet}, with a few differences:
+
+  * all users share the bulletin board area
+  * messages are grouped within areas or folders, not just folders
+  * only the administrator can create and delete top-level boards
+  * messages and folders cannot be edited from within the bulletin board area
+  * only the administrator or the creator of a message or area can delete
+	the message or area
+.np
+To post a message to a bulletin board, use an address of the form:
+
+    +BB / <mailserver> ( <bulletin board name> )
+
+for example:
+
+    +BB / JHB (Sales Department Notices)
+
+@entry{DIRECTORY,The OpenMail Directory}
+
+The OpenMail directory contains all the @ref{OPENMAILADDRESSES,addresses} for OpenMail users, as well
+as @ref{FOREIGNADDRESS,foreign addresses} (i.e., non-OpenMail addresses) which are used often.
+The OpenMail Administrator can add non-OpenMail addresses to the directory.
+
+@entry{OPENMAILADDRESSES,  OpenMail Addresses}
+
+OpenMail addresses consist of a User Name, incorporating a Given name, a
+Surname, and a mailnode. An OpenMail mailnode provides  unique organizational
+information about a user, and allows several users by the same name to be
+uniquely identified by their mailnode. Mailnodes are created by the OpenMail
+Administrator according to some organizational policy that reflects the 
+internal structure of the organization.
+
+OpenMail provides four levels of organizational unit which together comprise 
+the mailnode. For example, we could define a mailnode as /HQ. Assuming that we 
+have several departments in the headquarters, we can specify a more detailed
+breakdown of the mailnodes. Let's assume that we have sales and administration
+departments. We would then define:
+
+        /HQ,SALES
+and:
+        /HQ,ADMIN
+.np
+Now, we could also have several regional offices and headquarters, so we
+would need to specify these regions with a geographic descriptor to uniquely
+identify the regions. For example, if we had a regional office in London and
+one in Johannesbug, we could then specify the mailnodes as:
+
+        /LON,HQ,SALES
+        /JHB,HQ,SALES
+and:
+        /LON,HQ,ADMIN
+        /JHB,HQ,ADMIN
+
+In this way, we might have two John Smiths, but their addresses would be
+unique, since we specify their location using their mailnode. For example:
+
+        John Smith /LON,HQ,SALES
+and:
+        John Smith /JHB,HQ,ADMIN
+
+@entry{X400,  X.400 Addresses}
+
+X.400 is a worldwide standard that specifies 
+ 
+        A format for mail messages
+
+        A way of addressing messages
+
+The addressing mechanism that X.400 uses is a superset of OpenMail's
+addressing scheme, since OpenMail is internally X.400 compliant. The X.400
+addressing scheme is such as to ensure uniqueness of any X.400 mail address
+anywhere in the world. In industry parlance, the X.400 address is referred to
+as an OR (Originator-Recipient) address.
+
+The public x.400 network is maintained by organizations in each country, most
+often the major telecommunications companies. Each country in the world is
+identified by a two letter code. For example, the code for the United Kingdom
+is GB, that of the United States US and that of South Africa ZA.
+.np
+The telecommunication companies in each country operate Administrative
+Management Domains, referred to as an ADMD. For example, British Telecom
+have two ADMDs, one called BT and the other called GOLD 400, while South 
+Africa's Telkom have an ADMD called TELKOM400. IBM operate ADMDs in most of 
+the countries in which they are represented. Their ADMD name is IBMX400. 
+
+Within ADMDs, private companies or organizations can register their PRMDs,
+or Private Management Domains. A PRMD is the hub for an organization's 
+X.400 mail, and is responsible for distributing the mail to the users who are
+registered within the PRMD. 
+
+We can further stratify the addressing by specifiying an Organization, as
+many companies are hierarchically structured, and may wish to have distinct
+addresses, as the mail for each separate company should be delivered to a 
+different address. The X.400 code for the Organization is an O.   
+
+.np
+Within each Organization, we specify the Organizational Units. There are four 
+levels of Organizational Unit, and they correspond exactly to the OpenMail 
+mailnode. The Organizational Units are known as OU1 to OU4.
+
+The last component of an X.400 address is the Personal Name, divided up into
+several parts:
+
+        1. The Given Name, or G. Example, John
+
+        2. The Surname, or S. Example, Smith
+
+        3. The Initials, or I. There are up to five initials. Example D. G.
+
+The Personal Name items can be collectively referred to as P. 
+
+.np
+Let's assume that John Smith works for a company called Widget Engineering
+in South Africa. Widget Engineering has contracted with Telkom to have a 
+PRMD registered under Telkom's ADMD. John's X.400 address would then be
+
+C=ZA ADMD=TELKOM400 PRMD=WIDGET OU1=JHB OU2=HQ OU3=SALES P= John D. G. Smith.
+
+We often see this form of address on business cards.
+
+@entry{EXTENDEDX400,  Extended X.400 Addresses}
+
+There are a few other X.400 address items that are not commonly used, but 
+should be described here for completeness.
+
+        Domain Defined Attribute        A DDA is an unspecified item that can 
+                                        be defined by an organization for 
+                                        internal addressing.
+
+        UA Unique Numeric Identifier    A User Agent is a mail front-end
+                                        much like AdvanceMail/Remote. Some of 
+                                        these systems deliver to a user's 
+                                        mailbox by specifiying an electronic 
+                                        mailbox number. It is this number that
+                                        is referred to by the UA Unique 
+                                        Numeric Identifier. 
+                                        AdvanceMail/Remote delivers directly 
+                                        to your mailbox without the need for 
+                                        this number.
+
+        X.121 Address                   This is a numeric identifier that 
+                                        gives either a fax or telex number
+
+        Telematic Terminal Identifier   This identifies a telematic terminal 
+                                        by a telex answer back string or a 
+                                        teletex terminal identifier.
+ 
+The easiest way to send an X.400 message is to use the AdvanceMail/Remote 
+<X.400 Address> key. To access this screen, while in the out tray, press
+<Extended Address> then <X.400 Address>. 
+    
+@entry{POSITIONALFORMAT,  OpenMail Positional Format}
+
+You may also enter an X.400 address directly into the distribution list 
+screen. This is done in OpenMail Positional Format. The format for an 
+@ref{X400,X.400} address is
+
+
+        Personal Name /OU1,OU2,OU3,OU4/Organization/Country/ADMD/PRMD
+
+Using the John smith example address,  this address would be entered in 
+OpenMail Positional format as follows
+
+        John D.G. Smith /JHB,HQ,SALES/Widget Engineering/ZA/TELKOM400/WIDGET
+
+If you enter this address in the X.400 address screen, you will see when you
+exit the screen that the address is inserted into the distribution list in 
+the OpenMail Positional Format. You will find, as you become more familiar
+with the use of AdvanceMail/Remote, that you will tend to use this format 
+rather than entering the address using the screen driven interface.
+ 
+When entering such an address, you will occasionally find that the addressee's
+address has some unusual characters in it, characters that are illegal in an
+OpenMail address. The table below shows the illegal characters and those you 
+should substitute in place of these characters.
+
+                        Key Substitutions
+                __________________________________
+
+                Backspace               Underscore
+                .                       !
+                /                       |
+                ,                       ;
+                (                       {
+                )                       }
+
+
+@entry{FOREIGNADDRRESS,  Foreign Addresses}
+
+OpenMail allows you to send mail messages to foreign mail systems using the
+foreign address screen. All foreign addresses are sent to an openmail gateway
+that converts the mail message into the foreign format. Your OpenMail 
+administrator will define a mailnode that corresponds to the address of the 
+gateway.
+
+OpenMail has built in support for sending mail to unix users. Usually, the 
+mailnode that translates messages to unix mail format is know as /unix.
+Foreign mail systems have an addressing format that differs from OpenMail's
+address format, and this address needs to be passed to the foreign mail 
+system. OpenMail uses data enclosed in parentheses immediately following the 
+gateway mailnode  as the foreign mail address. Lets assume we want to send
+a mail message to John smith's unix user id. John's unix mail address is
+
+                        jsmith@widget.com
+
+
+In order to send a message to John's unix id, we need to address the message
+as follows
+
+                        John Smith /unix (jsmith@widget.com)
+
+
+You may fill in this address using the extended address screen.
+
+        1. At the Create screen, type the recipient's personal name, 
+           eg. John Smith
+
+        2. Type the mailnode that corresponds to the gateway, eg. /unix
+
+        3. Press <Other Keys>
+
+        4. Press <Foreign Address>
+
+        5. Complete the Foreign Address field omitting the brackets
+
+        6. Press <Done> repeatedly until you return to the Create screen
+
+A similar procedure is followed for all gateways that are defined on OpenMail.
+Another common type of gateway is a fax gateway, that supports sending of mail
+messages as faxes. Lets assume that the mailnode defined for the fax gateway
+is /fx. Instead of a unix mail address, the fax gateway requires a telephone
+number. You would enter a fax message address as follows
+
+
+                John Smith /fx (0116835472)
+
+@entry{DIRSEARCH2,  Searching the Directory}
+
+If you are unsure of the address of a person to whom you wish to send mail,
+you may consult the OpenMail Directory using the AdvanceMail/Remote search 
+engine. The search engine is an integral part of the distribution list 
+screen: wherever you enter an @ref{OPENMAILADDRESSES,address}, you may use the search engine.
+
+Using the search engine is very simple: an asterisk matches anything, so you
+can search on partial components of an address. For example, if you wish to 
+search for all surnames beginning in `Co', you enter `Co*' into the 
+address field and press <Enter>. AdvanceMail/Remote will pop up a list 
+box in the top right corner of the screen that contains all names in the 
+OpenMail directory that match the search condition.
+
+Let's illustrate the utility of the search engine through an additional few 
+examples. If you wish to search for all users whose first name is `Ian',
+type `Ian *' into the address line. You can find all users whose first name
+begins with `Da' and whose surname begins with `B' by typing in `Da* B*'.
+Typing only a `*' will bring up all users.
+
+OpenMail has a fuzzy search feature that allows it to bring back names
+that sound like the name that you entered if it finds no exact matches. In 
+order to use this feature, you need to enable the fuzzy search option. Please 
+see configuring for further details on the fuzzy search capability of OpenMail 
+and AdvanceMail/Remote. When doing normal searches, do not enable this option,
+as a fuzzy search takes longer than a normal search to complete. For example, 
+entering `Coo*' in a fuzzy search will match the following names, if present
+in the directory:
+
+        1. Cooper
+        2. Couper
+        3. Koupman
+        4. Coomer
+        5. Cumer
+
+@entry{DIRPASSWORD,  Changing the Directory}
+
+OpenMail has the ability to support additional directories, over and above the
+system directory. AdvanceMail/Remote allows you to use alternate directories. 
+Wherever you are presented with an address list to complete, you will see a 
+function key labelled <Change Directry>. To change directory, press this key, 
+select the desired directory name from the list box, press <Perform Change>
+and enter a password, pressing <Perform Change> when done. All directory 
+queries will now be directed to the new directory.
+
+@entry{DISTLISTS,  Private Distribution Lists}
+
+If you have groups of users to whom you frequently send mail, 
+AdvanceMail/Remote and OpenMail allow you to @ref{DISTLISTCREATE,create distribution lists}. A 
+distribution list is essentially an alias for a group of names. In order to 
+view all your lists, from the @ref{MAINSCREEN,main screen}, highlight the List area and press
+<Enter>. You will now see a tray, much like your @ref{INTRAY,In Tray}, except that 
+it contains entries for your distribution lists.  You may view any of these
+entries by highlighting it and pressing <Enter>. AdvanceMail/Remote will open
+the list and display all the names that comprise the list. All these lists
+that you see here are private lists, visible only to you.
+
+@entry{DISTLISTCREATE,  Creating a Distribution List}
+
+Creating a list is just as easy. From the top level List Area screen, press
+the <Create> key. You will be shown your standard addressing screen, where
+you may type in, each name on a separate line, the names of all people that
+you wish to have in your distribution list. You may use the OpenMail @ref{DIRSEARCH2,search
+engine} here, if desired. Make sure that you give the list a name by typing an
+entry into the name field at the top of the screen. When you have finished 
+entering the names, press <Save>, and your new list will be saved to your 
+List Area for future use.
+
+@entry{DISTLISTUSING,  Using a Distribution List}
+
+Using a distribution list is as easy as creating a list. Let's assume that
+we are @ref{CREATING,sending} a message, and we wish a copy to be sent to all members of a 
+list called managers. From the addressing screen of the new message, press 
+<Merge List>. AdvanceMail/Remote will bring up a list box in the top right
+corner of the screen containing the names of all your distribution lists. 
+Using the arrow keys, move the cursor highlight bar to managers, and press 
+<Perform Merge>. AdvanceMail/Remote will extract all the names from this 
+distribution list, and place each name on a separate line in your addressing 
+screen.
+
+@entry{PDL,  Public Distribution Lists}
+
+OpenMail also supports a feature known as Public Distribution Lists, or
+PDLs in OpenMail parlance. PDLs will appear in the @ref{DIRECTORY,OpenMail directory} just 
+like any other address. Sending a message to a PDL will cause the message to 
+be echoed to all users who are part of that PDL. It is the responsibility of 
+the OpenMail Administrator to setup and maintain such PDLs. As a user, you may
+assume that any PDL is always up to date. For details on the PDLs that exist
+in your system, please contact your OpenMail Administrator.
+
+@entry{NICKNAMES,Nicknames}
+
+AdvanceMail/Remote allows you to create nicknames for users to whom you 
+regularly send mail. A nickname is simply a shortened name that is an alias 
+for the user's mail address. For example, you may have created a nickname for 
+John Smith's address, called `John'. Whenever you use the nickname `John',
+AdvanceMail/Remote will substitute the address `John Smith /JHB,HQ,SALES'.
+
+@entry{NICKNAMECREATE,  Creating a Nickname}
+
+Creating a nickname is as simple as entering an address. Enter the address on
+a new blank line in the address screen and press <Create Nickname>.
+AdvanceMail/Remote will prompt you for a nickname at the top of the screen. 
+Enter the nickname you wish to use and press <Enter>. Unless the nickname is 
+already assigned to another user, AdvanceMail/Remote will now associate this 
+nickname with the user address you recently entered.  
+
+@entry{NICKNAMEUSING,  Using a Nickname}
+
+There are two ways to use a nickname. When addressing a message
+
+        1. Enter the nickname directly into the address line, and it will be 
+           replaced with the address to which it corresponds.
+
+        2. Press the <Nickname List> key. AdvanceMail/Remote will display a 
+           list box in the top right corner of the screen that contains all 
+           your nicknames. Using the arrow keys, move the cursor highlight 
+           bar down to the desired nickname and press <enter>
+
+Either of these two methods will produce the same result: the user's full
+@ref{OPENMAILADDRESSES,OpenMail address} will be entered on the address line on which the cursor
+was positioned prior to entering/selecting the nickname.  
+
+@entry{MESSAGESETTINGS,Message Settings}
+
+Each message that you @ref{CREATING,send} using AdvanceMail/Remote has certain settings 
+associated with it. These settings cause OpenMail to treat the message in 
+subtly different ways. The message settings screen can be accessed from the 
+@ref{EDITING,compose} screen by pressing the <Message Settings> function key.
+
+The following sections describe the message settings in detail, and 
+outline the effect of changing these settings.
+
+Message Importance
+
+This setting is for the information of the recipient(s) only, as it has no
+effect on how OpenMail handles the message. It tells the recipient(s) how
+important you think the message is. This field may have on of the following
+three values
+
+        1. Normal
+        2. Low
+        3. High
+
+Message Priority
+
+This setting tells the recipient(s) how urgent you think the message is and
+also specifies how the message is treated by OpenMail. Messages with an 
+urgent priority are delivered before messages with a normal or non-urgent 
+priority. You may also control auto-forwarding or auto-reply actions based 
+on the value of this field, e.g., you may choose to only forward urgent 
+messages.
+
+Message Sensitivity
+
+Message sensitivity tells the recipient how sensitive the data contained in
+the message is in your estimation. There are four possible settings for this
+field. They are
+
+        1. Not Sensitive
+        2. Personal
+        3. Private
+        4. Company Confidential
+
+Changing this field to private will ensure that only the recipient will be 
+able to read this message. As with the message priority, you may use this
+field to control your @ref{AUTOFORWARD,auto-forward} and @ref{AUTOREPLY,auto-reply} actions, e.g., you may
+choose to forward only those messages that are marked `not sensitive'.
+
+@entry{ACKNOWLEDGEMENTS,Acknowledgements}
+
+OpenMail has the ability to give you information about the delivery status of
+your message. There are four types of delivery notification that can be 
+requested
+
+                None            No acknowledgement will be returned 
+
+                Delivery Ack    You will be informed when the message is 
+                                delivered to the recipient's in tray
+
+                Read Ack        You will be informed when the message is 
+                                delivered and when the message is read
+
+                Reply           You will be informed when the message is 
+                                delivered, read, and when a reply to your 
+                                message has been constructed by the recipient
+
+@entry{MISCELLANEOUS,Miscellaneous Settings}
+
+There are six message settings that fall under the heading miscellaneous 
+settings. 
+
+1. Earliest delivery date and time 
+
+This is the earliest date and time at which OpenMail will deliver your 
+message. If you leave the data blank, today's date is assumed. If you leave 
+the time blank, the message will not be delivered before that start of the 
+day corresponding to the supplied date.
+
+2. Allow Public Distribution Lists
+
+Specifies whether to allow any of the addressees in the message's @ref{DISTLISTS,distribution
+list} to be PDLs
+.np
+3. Allow Alternative Recipients
+
+If a message cannot be delivered, it will normally be redirected to the 
+OpenMail Administrator. Select NO in this field to prevent your message being 
+redirected to the OpenMail Administrator.
+
+4. Allow Conversions
+
+If you would like a message to be delivered to the recipient(s) only if it 
+can be delivered without any file type conversions taking place, set this 
+field to NO. If conversions of any sort are required in order to deliver the 
+message, it will be returned to you undelivered.
+
+5. Allow Non-Delivery Notifications.
+
+If a message cannot be delivered, OpenMail sends you a non-delivery
+notification. If you wish to prevent this, change this setting to NO.
+
+6. Return Message with Non-Deliveries
+
+Some mail systems will return a message along with a non-delivery notification
+when the message cannot be delivered. If you wish to prevent the message being
+returned, set this field to NO.
+
+@entry{CONFIGURING,Configuring AdvanceMail/Remote}
+
+A file called .omsrc file is stored locally in a user's home directory.
+This file contains the setup options that one configures using the <Config> 
+key found on the main screen. 
+
+You may directly edit the .omsrc file, or you may use the Config option to 
+change these settings. Direct editing of the config file is not supported
+in the sense that the contents may change from release to release. The only
+supported way to change the settings is through the Config screen.
+
+In order to allow for a semi-automatic login to the OpenMail server, you may
+enter your user name and the OpenMail server name in the first two fields.
+Whenever you start up AdvanceMail/Remote, you will see that these fields are 
+automagically filled in. You will then be prompted for your password. Due to
+security implications, it is not possible to enter the password as a config
+option.
+.np
+You may change the time-interval at which AdvanceMail/Remote checks for new 
+mail. The default time interval is every six minutes, or 300 seconds.
+You may also set the maximum age of items in your Waste Basket. Any items
+older than this configured age will be emptied from the Waste Basket by the
+OpenMail Server. As with all other fields in AdvanceMail/Remote which accept a 
+predefined set of values, you may use <SpaceBar> to toggle between allowed 
+values.
+
+You may choose to log a copy of your outgoing messages to the message log. 
+This behaviour is switched off by default. Additionally, you may wish to view
+extra message information along with each message you read. This info includes
+such details as Submission date, delivery date and message setting flags}. 
+
+When viewing or printing a message, AdvanceMail/Remote normally displays at 
+most ten addresses, to prevent large distribution lists swamping the output.
+You may change this by editing the `Distribution List Lines When Printing'
+and `Distribution List Lines When Viewing' fields.
+
+If messages contain tab characters, these are expanded to tab stops of 8
+when viewing messages. This value can be changed if you desire. Note that
+the Advancemail/Remote text editor is not affected by this option at present.
+
+You may also change your @ref{PRINTSETUP,print command}. 
+
+@entry{PRINTSETUP,  Print Setup}
+
+Printing under AdvanceMail/Remote is highly configurable. An exclamation mark 
+is a placeholder for the message to be printed. Any command you enter on this 
+line will be passed directly to the operating system with the name of a 
+temporary file containing the text you wish to print substituted for the 
+exclamation mark. The default print action is to send the message text to the 
+first available printer though the use of the lp command.
+
+@entry{AUTOACTIONS,  Auto Actions}
+
+OpenMail can perform certain automatic actions for you. Of these,
+AdvanceMail/Remote allows you to set up auto-forward and auto-reply actions.
+The Configuration Screen indicates whether either of these auto-actions is
+enabled. `YES' means that the feature is enabled, while `NO' means that the
+feature is disabled.
+
+Pressing either <Auto Forward> or <Auto Reply> will display a screen, 
+described below, which allows you to configure your auto forward and auto 
+reply actions.
+
+@entry{AUTOFORWARD,    Auto Forward}
+
+The Auto Forward screen lets you configure forwarding @ref{AUTOACTIONS,auto-actions}. You
+can specify which types of messages should be auto-forwarded, and attach 
+a file containing your comments to any auto-forwarded message. You also
+need to specify who the messages should be auto-forwarded to.
+
+Apart from entering the distribution list, you can toggle several options
+on or off. These are:
+
+    Auto-Forward Active:    This option lets you enable or disable auto-
+                            forwarding. It also allows you to disable
+                            auto-forwarding without losing your auto-
+                            forward comments, distribution list, and options.
+    Include Comments:	    If this option is enabled, the auto-forwarded
+                            message will include your comments as the first
+                            body part after the distribution list. Turning
+                            this off will not destroy the comments, so you
+                            enable and disable it freely.
+    Delete Forwarded Mail:  If this option is set, the forwarded mail message
+                            will be deleted after it has been forwarded.
+    Keep Original Creator:  If this option is set, the message creator will
+                            be unchanged; if set to NO, the message creator
+                            will be changed to your name before forwarding.
+
+The remaining options specify which messages should *not* be auto-forwarded.
+You may not want confidential mail to be auto-forwarded, so you can disable
+the auto-forwarding of different types of confidential mail with these
+settings. Non-confidential mail is auto-forwarded by default.
+
+@entry{AUTOREPLY,    Auto Reply}
+ 
+The Auto-Reply screen lets you configure reply auto-actions. If you 
+configure an auto-reply, OpenMail will automatically send a reply to
+certain types of messages for you, consisting of a text message that
+you create. A common use of auto-reply is when going on vacation - you
+can get OpenMail to reply to any received mail telling the sender that
+you are away and will reply to them yourself when you return.
+
+From this screen, you can compose your reply by pressing the `Compose
+Reply' key, or you can set the options controlling auto-reply actions.
+These options are:
+
+    Auto-Reply Active:           This option lets you turn auto-reply
+                                 on or off. Setting this to OFF will
+                                 not destroy the reply text.
+.np
+    Reply to All Messages:       If this option is set, an auto-reply
+                                 will be sent to every received message.
+                                 In this case, the next two options are
+                                 automatically set to YES.
+    Reply to URGENT Messages:    If this option is set, all urgent messages
+                                 will be replied to.
+    Reply to Read/Reply Acks:    This option will cause auto-replies to
+                                 be sent to read and reply acknowledgements.
+
+@entry{PASSWORD,  Changing Your Password}
+
+In order to change your password, select <Change Password> from the Config
+screen. You will be prompted at the top of the screen for your existing
+password, which if you enter correctly, will cause AdvanceMail/Remote to 
+prompt you for your new password. You will be prompted a second time for
+your new password to ensure that there were no mistaken keypresses when you
+entered your new password the first time.

@@ -1,0 +1,25 @@
+# AdvMail/Remote - An HP OpenMail Client
+
+Back in the 1990s I cofounded a startup with a coupe of friends that eventually became CEQURUX B.V., but 
+at first we called ourselves Open Mind Solutions, and the very first thing I wrote was this code. At the 
+time enterprises still largely used X.400-based email systems, and the main vendor was Hewlett-Packard
+with the OpenMail X.400 system. The main problem was that in order to use it, you had to sign on to the
+(Unix-based) mail server. If you were a large enterprise with hundreds or thousands of users, having everyone
+sign on to the mail server was not a great experience; these systems didn't scale well. 
+
+We had customers interested in having a proper client-server system, where the email client app ran on 
+separate machines to the X.400 server. The HP OpenMail libraries supported this, but their client program
+did not. And HP were asking one of our clients for a lot of money to update the client, and saying that it
+would take about 9 months. Sensing an opportunity, we said we would make an exact clone of the client 
+except that we would include remote server support, do it in one month, and do it for a lot less. 
+And so AdvMail/Remote was born. I didn't sleep much that month. But we hit the deadline and shipped the
+code, and it worked well enough we barely had any support burden afterwards and could move on to other things.
+I even added some features that the HP client didn't have, like a hypertext help system. I was helped
+by the fact that I had written a fair amount of curses code as part of my Ph.D. work and for Gram's Commander,
+including a text editor and a help system, so I could repurpose some of that.
+
+This was all long ago and SMTP has long displaced X.400. I'm just putting this code up for posterity. The
+HP API libraries are of course not included as those were proprietary.
+
+
+
